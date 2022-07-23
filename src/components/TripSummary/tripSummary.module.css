@@ -1,0 +1,13 @@
+wrapper {
+    border-top: black solid 1px;
+    padding: 0 20px 0 20px;
+    display: flex;
+}
+
+list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 20;
+    max-height: 40;
+}

@@ -1,0 +1,26 @@
+wrapper {
+    border: lightgrey solid 1px;
+    margin: 20;
+    padding: 10;
+    position: relative;
+    text-align: center;
+    text-transform: capitalize;
+    width: 200;
+}
+
+favorite {
+    font-size: 20;
+    position: absolute;
+    bottom: 10;
+    right: 10;
+}
+
+add {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+image {
+    width: 80;
+}
