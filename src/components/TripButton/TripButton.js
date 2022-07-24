@@ -1,13 +1,25 @@
 import React, { useContext } from 'react'
-import { TripContext } from '../TripMaker/TripMaker';
+import { CartContext, CartProvider } from '../../Context/CartContext';
 import styles from './tripButton.module.css'
 
-const TripButton = ({ text }) => {
-  const { setTrip } = useContext(TripContext);
+const TripButton = ({ text, item }) => {
+  const { cart, setCart} = useContext(CartContext);
+
+  const handleAddToCart = () => {
+    // let newCart = [...cart];
+    setCart(item);
+    console.log(cart);
+  }
+
+  // const handleRemoveFromCart = () => console.log(item);
+
   return (
-    <button className={styles.add} onClick={() => setTrip(text)}>
-      {text}
-    </button>
+    <CartProvider>
+      <button 
+        className={styles.button} 
+        onClick={handleAddToCart}
+      >{text}</button>
+    </CartProvider>
   )
 }
 

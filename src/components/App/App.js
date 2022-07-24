@@ -1,22 +1,17 @@
 import React from 'react';
+import { UserProvider } from '../../Context/UserContext';
 import Header from '../Header/Header';
 import TripMaker from '../TripMaker/TripMaker';
-import UserContext from '../User/User';
 import './App.css';
-
-const user = {
-  name: "Homero",
-  email: "homerosimp@gmail.com"
-}
 
 function App() {
   return (
-    <React.StrictMode>
-    <UserContext.Provider value={user}>
-      <Header />
-      <TripMaker/>
-    </UserContext.Provider>
-  </React.StrictMode> 
+    <UserProvider>
+      <div>
+        <Header />
+        <TripMaker/>
+      </div>
+    </UserProvider> 
   );
 }
 

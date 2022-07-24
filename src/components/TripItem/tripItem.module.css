@@ -1,26 +1,30 @@
-wrapper {
-    border: lightgrey solid 1px;
-    margin: 20;
+.wrapper {
+    background-color: rgb(218, 210, 210);
+    width: 20%;
+    /* border: rgb(204, 222, 226) solid 2px; */
+    margin: 1rem;
     padding: 10;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     position: relative;
     text-align: center;
     text-transform: capitalize;
-    width: 200;
+    border-radius: 10px; 
+    overflow: unset;
 }
 
-favorite {
-    font-size: 20;
-    position: absolute;
-    bottom: 10;
-    right: 10;
+.image {
+    position: relative;
+    width: 90%;
+    border-radius: 5px;
 }
 
-add {
-    border: none;
-    background: none;
-    cursor: pointer;
+.image:hover {
+    transition: 1.2s;
+    transform: scale(1.3);
 }
 
-image {
-    width: 80;
+p {
+    margin: 1rem;
+    font-size: 10px;
+    text-align: left;
 }

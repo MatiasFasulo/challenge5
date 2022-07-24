@@ -1,13 +1,36 @@
-wrapper {
-    border-top: black solid 1px;
-    padding: 0 20px 0 20px;
+.wrapper {
+    background-color: #ece2c6;
+    width: 80%;
+    margin: 0 auto 2rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.cartContainer {
     display: flex;
 }
 
-list {
+.list {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
-    font-size: 20;
-    max-height: 40;
+}
+
+.list > li {
+    list-style-type: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 0 1rem;
+    background-color: rgb(255, 255, 255);
+    padding: .3rem;
+    border-radius: 5px;
+}
+
+.divider {
+    background-color: black;
+    width: 1rem;
+    height: 100%;
 }

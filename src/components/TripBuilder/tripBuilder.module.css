@@ -1,7 +1,8 @@
-wrapper {
+.wrapper {
+    width: 90vw;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
-    border-bottom: black solid 1px;
     padding: 10, 50;
     justify-content: center;
 }

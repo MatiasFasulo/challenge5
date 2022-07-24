@@ -1,18 +1,32 @@
 import React, { useContext } from 'react'
-import { TripContext } from '../TripMaker/TripMaker';
+import { CartContext, CartProvider } from '../../Context/CartContext';
+import TripButton from '../TripButton/TripButton';
 import styles from './tripSummary.module.css'
+const CANCEL = "Cancelar";
 
 const TripSummary = () => {
-  const { trips } = useContext(TripContext);
+  const { cart } = useContext(CartContext);
+  //const cart = [];
+  console.log(cart);
+
+  const handleCancel = () => {
+    console.log("eliminar ultimo")
+  }
+
   return (
-    <div className={styles.wrapper}>
-      <h2>Tu pedido: </h2>
-      <ul className={styles.list}>
-        {trips.map((name) => (
-          <li key={name}>{name}</li>
-        ))}
-      </ul>
-    </div>
+    <CartProvider>
+      <div className={styles.wrapper}>
+        <h4>Carrito: </h4>
+        <div className={styles.divider}></div>
+        <ul className={styles.list}>
+          {cart.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+        <div className={styles.divider}></div>
+        <TripButton text={CANCEL} action={handleCancel} />
+      </div>
+    </CartProvider>
   )
 }
 
